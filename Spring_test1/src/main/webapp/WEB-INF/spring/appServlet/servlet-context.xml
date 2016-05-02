@@ -22,7 +22,7 @@
 	</beans:bean>
 	
 	<context:component-scan base-package="com.choa.p1" /> <!-- 1.해당 폴더안에서 컨트롤러가 붙어있는 애를 찾는다. -->
-	<context:component-scan base-package="com.choa.control" />
+	
 	
 	
 	
