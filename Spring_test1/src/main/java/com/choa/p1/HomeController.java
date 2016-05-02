@@ -4,9 +4,12 @@ import java.text.DateFormat;
 import java.util.Date;
 import java.util.Locale;
 
+import javax.inject.Inject;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Repository;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -16,6 +19,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
  */
 @Controller
 public class HomeController {
+	@Inject
+	private Member m;
+	
+	@Inject
+	private Manager mg;
+	
+	@Inject
+	private Student st;
 	
 	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
 	
@@ -38,6 +49,15 @@ public class HomeController {
 	
 	@RequestMapping(value = "/test.do")
 	public String test(){
+		
+	System.out.println(m.getName());
+	System.out.println(m.getAge());
+	
+	System.out.println(mg.getName());
+	System.out.println(mg.getAge());
+	
+	System.out.println(st.getMember().getName());
+	System.out.println(st.getGrade());
 		
 		return "test";
 	}

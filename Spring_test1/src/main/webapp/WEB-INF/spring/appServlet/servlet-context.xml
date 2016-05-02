@@ -21,6 +21,11 @@
 		<beans:property name="suffix" value=".jsp" />  <!--3.뒤에다 value내용을 붙여줌 -->
 	</beans:bean>
 	
+	<beans:bean id="member" class="com.choa.p1.Member"> <!-- class를 참조해서 id 라는 객체를 만들어라 -->
+	<beans:property name="name" value="choa"></beans:property>  <!-- 미리객체를 만들 필요가 있는 것들은 이렇게..ex)DBCon -->
+	<beans:property name="age" value="34"></beans:property>
+	</beans:bean>
+	
 	<context:component-scan base-package="com.choa.p1" /> <!-- 1.해당 폴더안에서 컨트롤러가 붙어있는 애를 찾는다. -->
 	
 	
