@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="NoticeMapper"> <!-- namespace: 자기 파일명 -->
+  
+  <select id="view" resultType="com.choa.notice.NoticeDTO"> <!-- resultType: return 타입 -->
+ <![CDATA[ select * from notice where num=#{num} ]]> <!-- id:DAO의 메소드명  , <[CDATA[~]]> : 사이에 들어간<>는 부등호로 취급함. -->
+  </select>
+
+
+                   <!-- parameterType : 받아오는 데이터 타입 -->
+<select id="insert" parameterType="com.choa.notice.NoticeDTO" resultType="java.lang.integer">
+insert into notice values(nt_seq.nextVal,#{id},#{title},#{content},sysdate,0)
+</select>
+
+
+<select id="" resultType="java.util.">
+
+</select>
+
+
+  </mapper>

@@ -7,8 +7,7 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-4.2.xsd
 		http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring-1.2.xsd
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">
-	
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd">	
 	<!-- Root Context: defines shared resources visible to all other web components -->
 		
 		<!-- DB와 연결하는 커낵션객체 -->
@@ -28,6 +27,7 @@
 		<!-- 팩토리에서 버무린 결과물을 받는 그릇 -->
 		<bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate" destroy-method="clearCache">		
 		<constructor-arg name="sqlSessionFactory" ref="sqlSessionFactory"></constructor-arg>
-		</bean>
+		</bean>		
 		
+		<context:component-scan base-package="com.choa.notice" />		
 </beans>
