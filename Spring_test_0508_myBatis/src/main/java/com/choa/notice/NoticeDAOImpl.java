@@ -13,6 +13,7 @@ public class NoticeDAOImpl implements NoticeDAO {
 
 	@Inject
 	private SqlSession sqlsession;
+	@Inject
 	private static final String nameSpace="NoticeMapper";
 	
 	@Override

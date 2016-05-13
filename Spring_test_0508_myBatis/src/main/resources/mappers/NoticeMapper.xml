@@ -11,14 +11,11 @@
 
 
                    <!-- parameterType : 받아오는 데이터 타입 -->
-<select id="insert" parameterType="com.choa.notice.NoticeDTO" resultType="java.lang.integer">
+<!-- <insert id="insert" parameterType="com.choa.notice.NoticeDTO" resultType="java.lang.integer">
 insert into notice values(nt_seq.nextVal,#{id},#{title},#{content},sysdate,0)
-</select>
+</insert> -->
 
 
-<select id="" resultType="java.util.">
-
-</select>
 
 
   </mapper>

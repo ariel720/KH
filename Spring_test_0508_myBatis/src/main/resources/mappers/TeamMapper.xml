@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="TeamMapper"> <!-- namespace: 자기 파일명 -->
+  
+  <insert id="insert" parameterType="com.choa.team.DTO">
+  insert into team values(#{name},#{grade},#{team})
+  </insert>
+  
+ 
+  <select id="select" parameterType="com.choa.team.DTO" resultType="com.choa.team.DTO"> <!-- resultType: return 타입 -->
+select * from team where grade=#{grade} and team=#{team} <!-- id:DAO의 메소드명  , <[CDATA[~]]> : 사이에 들어간<>는 부등호로 취급함. -->
+  </select>
+  
+  
+  <select id="list" resultType="com.choa.team.DTO">
+  select * from TEAM order by TEAM asc
+  </select>
+  
+  
+  </mapper>
